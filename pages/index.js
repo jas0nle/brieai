@@ -28,16 +28,18 @@ const Home = () => {
       <Hero />
       <SectionTitle
         pretitle="Nextly Benefits"
-        title=" Why should you use this landing page">
-        BrieAI is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
+        title=" Why should you use this landing page"
+      >
+        BrieAI is the best revolution in exercise since the invention of AI. We
+        aim to use machine learning and artificial intelligence to optimize your
+        worksouts, ensuring that you get the best pump each time, every time.
       </SectionTitle>
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
       <SectionTitle
         pretitle="Watch a video"
-        title="Learn how to fullfil your needs">
+        title="Learn how to fullfil your needs"
+      >
         This section is to highlight a promo or demo video of your product.
         Analysts says a landing page with video has 3% more conversion rate. So,
         don&apos;t forget to add one. Just like this.
@@ -45,7 +47,8 @@ const Home = () => {
       <Video />
       <SectionTitle
         pretitle="Testimonials"
-        title="Here's what our customers said">
+        title="Here's what our customers said"
+      >
         Testimonails is a great way to increase the brand trust and awareness.
         Use this section to highlight your popular customers.
       </SectionTitle>
@@ -60,6 +63,6 @@ const Home = () => {
       <PopupWidget />
     </>
   );
-}
+};
 
 export default Home;
