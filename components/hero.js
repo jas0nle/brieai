@@ -12,9 +12,10 @@ const Hero = () => {
               BrieAI - Revolutionizing Workouts For Good
             </h1>
             <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
-              Nextly is a free landing page & marketing website template for
-              startups and indie projects. Its built with Next.js & TailwindCSS.
-              And its completely open-source.
+              BrieAI is the best revolution in exercise since the invention of
+              the computer. Ready to improve your workouts and see how to get
+              the most from your daily sessions? Sign up today and see what Brie
+              can do for you.
             </p>
 
             <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
@@ -24,7 +25,7 @@ const Hero = () => {
                 rel="noopener"
                 className="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md "
               >
-                Download for Free
+                Get Started
               </a>
               <a
                 href="https://github.com/web3templates/nextly-template/"
