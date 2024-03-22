@@ -10,13 +10,18 @@ const Cta = () => {
   };
 
   const displayVideo = () => {
+    console.log("test");
     if (uploadedVideo) {
       console.log("viduploaded");
       const videoURL = URL.createObjectURL(uploadedVideo);
       const videoElement = document.createElement('video');
       videoElement.src = videoURL;
       videoElement.controls = true;
-      document.body.appendChild(videoElement);
+      const container = document.createElement('div');
+      container.appendChild(videoElement);
+
+      // Append the container to the document body
+      document.body.appendChild(container);
     } else {
       console.log("error");
       alert("Please upload a video first.");
