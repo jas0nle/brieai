@@ -41,6 +41,7 @@ const Cta = () => {
           </form>
         </div>
       </div>
+      <py-script>print("Hello World")</py-script>
     </Container>
   );
 };
