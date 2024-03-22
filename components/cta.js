@@ -8,14 +8,21 @@ const Cta = () => {
     const file = event.target.files[0];
     setUploadedVideo(file);
   };
+
+  const displayVideo = () => {
+    if (uploadedVideo) {
+      const videoURL = URL.createObjectURL(uploadedVideo);
+      const videoElement = document.createElement('video');
+      videoElement.src = videoURL;
+      videoElement.controls = true;
+      document.body.appendChild(videoElement);
+    } else {
+      alert("Please upload a video first.");
+    }
+  };
+
   return (
     <Container>
-      <head>
-      <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-      <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-      <py-env>
-      </py-env>
-      </head>
       <div className="flex flex-wrap items-center justify-between w-full max-w-4xl gap-5 mx-auto text-white bg-indigo-600 px-7 py-7 lg:px-12 lg:py-12 lg:flex-nowrap rounded-xl">
         <div className="flex-grow text-center lg:text-left">
           <h2 className="text-2xl font-medium lg:text-3xl">
@@ -44,18 +51,11 @@ const Cta = () => {
             <button
               type="button"
               id="button"
+              onclick={displayVideo}
               className="inline-block py-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 cursor-pointer"
             >
               Submit
             </button>
-            <py-script>
-            from js import document
-            from pyodide import create_proxy
-            def runPython():
-              print("you clicked me")
-            function_proxy = create_proxy(runPython)
-            document.getElementById("button").addEventListener("click",function_proxy)
-            </py-script>
           </form>
         </div>
       </div>
