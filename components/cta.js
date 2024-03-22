@@ -11,12 +11,14 @@ const Cta = () => {
 
   const displayVideo = () => {
     if (uploadedVideo) {
+      console.log("viduploaded");
       const videoURL = URL.createObjectURL(uploadedVideo);
       const videoElement = document.createElement('video');
       videoElement.src = videoURL;
       videoElement.controls = true;
       document.body.appendChild(videoElement);
     } else {
+      console.log("error");
       alert("Please upload a video first.");
     }
   };
