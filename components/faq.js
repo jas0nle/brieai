@@ -31,16 +31,17 @@ const Faq = () => {
       </div>
     </Container>
   );
-}
+};
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
+    question: "How much is BrieAI?",
+    answer: "$9.99 a month. And it's worth every penny. :)",
   },
   {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
+    question: "Can I use it for any activity?",
+    answer:
+      "Yes! BrieAI was made to accomodate workouts of all types. From cycling to rock climbing, we have you covered.",
   },
   {
     question: "What is your refund policy? ",
@@ -50,7 +51,7 @@ const faqdata = [
   {
     question: "Do you offer technical support? ",
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "Yes! For those on a paid plan, please email us for custom support.",
   },
 ];
 
