@@ -8,23 +8,24 @@ const Cta = () => {
     const file = event.target.files[0];
     setUploadedVideo(file);
   };
-
-
-  const cv = require('opencv4nodejs');
-  const fs = require('fs');
-  const base64 = require('base64-js');
-
-  const displayVideo = () => {
-    const video = new cv.VideoCapture(uploadedVideo);
-    const base64Frames = [];
-    while (video.read()) {
-      const frame = video.frame;
-      const jpgBuffer = cv.imencode('.jpg', frame);
-      const base64Encoded = base64.fromByteArray(jpgBuffer);
-      base64Frames.push(base64Encoded);
+  // watch this: https://www.youtube.com/watch?v=rFPzo1VnPXU
+  const displayVideo = (event) => {
+    event.preventDefault(); // Prevent the default form submission behavior
+    if (uploadedVideo) {
+      const videoURL = URL.createObjectURL(uploadedVideo);
+      const videoElement = document.createElement('video');
+      videoElement.src = videoURL;
+      videoElement.controls = true;
+  
+      // Create a container div
+      const container = document.createElement('div');
+      container.appendChild(videoElement);
+  
+      // Append the container to the document body
+      document.body.appendChild(container);
+    } else {
+      alert("Please upload a video first.");
     }
-    video.release();
-    console.log(base64Frames.length + ' frames read.');
   };
 
   return (
@@ -56,7 +57,7 @@ const Cta = () => {
             </label>
             <button
               id="button"
-              onClick={displayVideo}
+              onClick={(event) => displayVideo(event)}
               className="inline-block py-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 cursor-pointer"
             >
               Submit
