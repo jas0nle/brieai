@@ -6,56 +6,61 @@ import userOneImg from "../public/img/user1.jpg";
 import userTwoImg from "../public/img/user2.jpg";
 import userThreeImg from "../public/img/user3.jpg";
 
-const Testimonials  = () => {
+const Testimonials = () => {
   return (
     <Container>
       <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
         <div className="lg:col-span-2 xl:col-auto">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              Share a real <Mark>testimonial</Mark>
-              that hits some of your benefits from one of your popular customer.
+              BrieAI <Mark>transformed</Mark> my workouts completely! With its
+              personalized feedback, I've corrected my form and seen incredible
+              gains in just weeks.
             </p>
 
             <Avatar
               image={userOneImg}
-              name="Sarah Steiner"
-              title="VP Sales at Google"
+              name="Emily S."
+              title="Fitness Enthusiast"
             />
           </div>
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              Make sure you only pick the <Mark>right sentence</Mark>
-              to keep it short and simple.
+              I used to struggle with sticking to a workout routine, but BrieAI
+              <Mark>changed everything</Mark>. Its customized schedule keeps me
+              motivated and on track, making fitness a seamless part of my
+              lifestyle.
             </p>
 
             <Avatar
               image={userTwoImg}
-              name="Dylan Ambrose"
-              title="Lead marketer at Netflix"
+              name="Alex M."
+              title="Busy Professional"
             />
           </div>
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              This is an <Mark>awesome</Mark> landing page template I&apos;ve seen. I
-              would use this for anything.
+              I've tried countless fitness apps, but none compare to BrieAI. Its
+              <Mark>AI-powered insights</Mark> have taken my training to the
+              next level, helping me achieve my goals faster than I ever thought
+              possible.
             </p>
 
             <Avatar
               image={userThreeImg}
-              name="Gabrielle Winn"
-              title="Co-founder of Acme Inc"
+              name="Luke H."
+              title="Dedicated Athlete"
             />
           </div>
         </div>
       </div>
     </Container>
   );
-}
+};
 
 function Avatar(props) {
   return (

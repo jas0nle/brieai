@@ -46,8 +46,7 @@ const Home = () => {
         pretitle="Testimonials"
         title="Here's what our customers said"
       >
-        Testimonails is a great way to increase the brand trust and awareness.
-        Use this section to highlight your popular customers.
+        From students to athletes to busy professionals, BrieAI is for everyone.
       </SectionTitle>
       <Testimonials />
       <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
