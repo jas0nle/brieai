@@ -16,7 +16,7 @@ const Cta = () => {
         <div className="flex-shrink-0 w-full text-center lg:w-auto">
           <form action="" method="get" enctype="multipart/form-data">
             <label
-              for="video"
+              for="upload-video"
               className="inline-block py-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 cursor-pointer"
             >
               Upload Video
