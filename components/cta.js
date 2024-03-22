@@ -2,6 +2,12 @@ import React from "react";
 import Container from "./container";
 
 const Cta = () => {
+  const [uploadedVideo, setUploadedVideo] = useState(null);
+
+  const handleFileUpload = (event) => {
+    const file = event.target.files[0];
+    setUploadedVideo(file);
+  };
   return (
     <Container>
       <div className="flex flex-wrap items-center justify-between w-full max-w-4xl gap-5 mx-auto text-white bg-indigo-600 px-7 py-7 lg:px-12 lg:py-12 lg:flex-nowrap rounded-xl">
@@ -19,13 +25,16 @@ const Cta = () => {
               htmlFor="upload-video"
               className="inline-block py-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 cursor-pointer"
             >
-              Upload Video
+              {uploadedVideo
+                ? `Submit + ${uploadedVideo.name}`
+                : "Upload Video"}
               <input
                 type="file"
                 id="upload-video"
                 name="video"
                 className="hidden"
                 accept="video/*"
+                onChange={handleFileUpload}
               />
             </label>
           </form>
