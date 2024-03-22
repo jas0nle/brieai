@@ -71,7 +71,11 @@ const Cta = () => {
           />
         </div>
       )}
+      <PyScriptProvider>
+      <PyScript>display("Hello world!")</PyScript>
+      </PyScriptProvider>
     </Container>
+    
   );
 };
 
