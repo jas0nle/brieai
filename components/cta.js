@@ -25,9 +25,7 @@ const Cta = () => {
               htmlFor="upload-video"
               className="inline-block py-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 cursor-pointer"
             >
-              {uploadedVideo
-                ? `Submit + ${uploadedVideo.name}`
-                : "Upload Video"}
+              {uploadedVideo ? `${uploadedVideo.name}` : "Upload Video"}
               <input
                 type="file"
                 id="upload-video"
@@ -37,6 +35,9 @@ const Cta = () => {
                 onChange={handleFileUpload}
               />
             </label>
+            <button className="inline-block py-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 cursor-pointer">
+              Submit
+            </button>
           </form>
         </div>
       </div>
