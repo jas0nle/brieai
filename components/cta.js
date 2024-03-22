@@ -44,10 +44,12 @@ const Cta = () => {
               Submit
             </button>
             <py-script>
-              from js import document from pyodide import create_proxy def
-              runPython(): print("you clicked me") function_proxy =
-              create_proxy(runPython)
-              document.getElementById("button").addEventListener("click",function_proxy)
+            from js import document
+            from pyodide import create_proxy
+            def runPython():
+              print("you clicked me")
+            function_proxy = create_proxy(runPython)
+            document.getElementById("button").addEventListener("click",function_proxy)
             </py-script>
           </form>
         </div>
