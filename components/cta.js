@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { PyScriptProvider } from "pyscript-react";
+import PyScript, { PyScriptProvider } from "pyscript-react";
 import Container from "./container";
 
 const Cta = () => {
