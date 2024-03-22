@@ -14,13 +14,19 @@ const Cta = () => {
           </p>
         </div>
         <div className="flex-shrink-0 w-full text-center lg:w-auto">
-          <form action="" method="get" enctype="multipart/form-data">
+          <form action="" method="get" encType="multipart/form-data">
             <label
-              for="upload-video"
+              htmlFor="upload-video"
               className="inline-block py-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 cursor-pointer"
             >
               Upload Video
-              <input type="file" name="video" />
+              <input
+                type="file"
+                id="upload-video"
+                name="video"
+                className="hidden"
+                accept="video/*"
+              />
             </label>
           </form>
         </div>
