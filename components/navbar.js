@@ -5,7 +5,7 @@ import { Disclosure } from "@headlessui/react";
 
 const Navbar = () => {
   const navigation = [
-    <Link href="pages/_app.js" className="brie.html">
+    <Link href="/_app" className="brie.html">
       Product
     </Link>,
     "Features",
