@@ -3,26 +3,16 @@ import Container from "./container";
 
 const Cta = () => {
   const [uploadedVideo, setUploadedVideo] = useState(null);
+  const [showVideo, setShowVideo] = useState(false);
 
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
     setUploadedVideo(file);
   };
-  // watch this: https://www.youtube.com/watch?v=rFPzo1VnPXU
-  const displayVideo = (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
+
+  const displayVideo = () => {
     if (uploadedVideo) {
-      const videoURL = URL.createObjectURL(uploadedVideo);
-      const videoElement = document.createElement('video');
-      videoElement.src = videoURL;
-      videoElement.controls = true;
-  
-      // Create a container div
-      const container = document.createElement('div');
-      container.appendChild(videoElement);
-  
-      // Append the container to the document body
-      document.body.appendChild(container);
+      setShowVideo(true);
     } else {
       alert("Please upload a video first.");
     }
@@ -57,7 +47,10 @@ const Cta = () => {
             </label>
             <button
               id="button"
-              onClick={(event) => displayVideo(event)}
+              onClick={(event) => {
+                event.preventDefault();
+                displayVideo();
+              }}
               className="inline-block py-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 cursor-pointer"
             >
               Submit
@@ -65,6 +58,19 @@ const Cta = () => {
           </form>
         </div>
       </div>
+      {showVideo && (
+        <div
+          className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-75 z-50"
+          onClick={() => setShowVideo(false)}
+        >
+          <video
+            src={URL.createObjectURL(uploadedVideo)}
+            controls
+            className="mx-auto"
+            style={{ maxWidth: "90%", maxHeight: "90%", display: "block" }}
+          />
+        </div>
+      )}
     </Container>
   );
 };
