@@ -4,7 +4,15 @@ import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 
 const Navbar = () => {
-  const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
+  const navigation = [
+    <Link href="/product" className="brie.html">
+      Product
+    </Link>,
+    "Features",
+    "Pricing",
+    "Company",
+    "Blog",
+  ];
 
   return (
     <div className="w-full">
