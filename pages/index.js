@@ -26,7 +26,7 @@ const Home = () => {
 
       <Navbar />
       <Hero />
-      <SectionTitle pretitle="Join the Wave" title="Why BrieAI">
+      <SectionTitle pretitle="Why BrieAI" title="Join the Wave">
         BrieAI is the best revolution in exercise since the invention of AI. We
         aim to use machine learning and artificial intelligence to optimize your
         worksouts, ensuring that you get the best pump each time, every time.

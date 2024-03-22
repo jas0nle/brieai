@@ -50,7 +50,7 @@ const Hero = () => {
             Trusted by{" "}
             <span className="text-indigo-600">
               Athletes, Fitness Professionals, and Trainers
-            </span>
+            </span>{" "}
             worldwide
           </div>
 

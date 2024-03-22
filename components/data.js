@@ -4,6 +4,7 @@ import {
   CursorArrowRaysIcon,
   DevicePhoneMobileIcon,
   AdjustmentsHorizontalIcon,
+  Calculator,
   SunIcon,
 } from "@heroicons/react/24/solid";
 
@@ -11,24 +12,24 @@ import benefitOneImg from "../public/img/benefit-one.png";
 import benefitTwoImg from "../public/img/benefit-two.png";
 
 const benefitOne = {
-  title: "Highlight your benefits",
-  desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
+  title: "The benefits of AI powered workouts",
+  desc: "From personalized guidance to optimized routines, each workout is tailored to maximize your results. Embrace efficiency, precision, and effectiveness like never before, and unlock the true potential of your fitness journey with AI-powered workouts.",
   image: benefitOneImg,
   bullets: [
     {
-      title: "Understand your customers",
-      desc: "Then explain the first point breifly in one or two lines.",
+      title: "Improved Workouts",
+      desc: "Elevate your fitness journey with precision and effectiveness.",
       icon: <FaceSmileIcon />,
     },
     {
-      title: "Improve acquisition",
-      desc: "Here you can add the next benefit point.",
+      title: "Personalized Feedback",
+      desc: "Unlock personalized feedback on your workout form and technique.",
       icon: <ChartBarSquareIcon />,
     },
     {
-      title: "Drive customer retention",
-      desc: "This will be your last bullet point in this section.",
-      icon: <CursorArrowRaysIcon />,
+      title: "Custom Schedule and Plans",
+      desc: "Receive a custom workout schedule tailored to your needs.",
+      icon: <Calculator />,
     },
   ],
 };
@@ -56,5 +57,4 @@ const benefitTwo = {
   ],
 };
 
-
-export {benefitOne, benefitTwo};
+export { benefitOne, benefitTwo };
