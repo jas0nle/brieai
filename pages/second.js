@@ -16,41 +16,13 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Nextly - Free Nextjs & TailwindCSS Landing Page Template</title>
-        <meta
-          name="description"
-          content="Nextly is a free landing page template built with next.js & Tailwind CSS"
-        />
+        <title>BrieAI App</title>
+        <meta name="description" content="BrieAI App" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Navbar />
-      <Hero />
-      <SectionTitle pretitle="Why BrieAI" title="Join the Wave">
-        BrieAI is the second.
-      </SectionTitle>
-      <Benefits data={benefitOne} />
-      <Benefits imgPos="right" data={benefitTwo} />
-      <SectionTitle
-        pretitle="Watch a video"
-        title="Learn how to fullfil your needs"
-      >
-        This section is to highlight a promo or demo video of your product.
-        Analysts says a landing page with video has 3% more conversion rate. So,
-        don&apos;t forget to add one. Just like this.
-      </SectionTitle>
-      <Video />
-      <SectionTitle
-        pretitle="Testimonials"
-        title="Here's what our customers said"
-      >
-        From students to athletes to busy professionals, BrieAI is for everyone.
-      </SectionTitle>
-      <Testimonials />
-      <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
-        You have questions. We have your answers:
-      </SectionTitle>
-      <Faq />
+
       <Cta />
       <Footer />
       <PopupWidget />
