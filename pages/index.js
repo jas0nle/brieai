@@ -50,7 +50,6 @@ const Home = () => {
         You have questions. We have your answers:
       </SectionTitle>
       <Faq />
-      <Cta />
       <Footer />
       <PopupWidget />
     </>
