@@ -3,7 +3,7 @@ import Container from "./container";
 
 const Cta = () => {
   const [uploadedVideo, setUploadedVideo] = useState(null);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [showVideo, setShowVideo] = useState(false);
 
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
@@ -12,18 +12,9 @@ const Cta = () => {
 
   const displayVideo = () => {
     if (uploadedVideo) {
-      const videoURL = URL.createObjectURL(uploadedVideo);
-      return (
-        <video
-          src={videoURL}
-          controls
-          className="mx-auto block"
-          style={{ maxWidth: "100%", maxHeight: "100%", display: "block" }}
-        />
-      );
+      setShowVideo(true);
     } else {
-      setErrorMessage("Please upload a video first.");
-      return null;
+      alert("Please upload a video first.");
     }
   };
 
@@ -65,12 +56,21 @@ const Cta = () => {
               Submit
             </button>
           </form>
-          {errorMessage && <p className="text-red-500 mt-2">{errorMessage}</p>}
         </div>
       </div>
-      <div className="video-container fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-80 z-50">
-        {displayVideo()}
-      </div>
+      {showVideo && (
+        <div
+          className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-75 z-50"
+          onClick={() => setShowVideo(false)}
+        >
+          <video
+            src={URL.createObjectURL(uploadedVideo)}
+            controls
+            className="mx-auto"
+            style={{ maxWidth: "90%", maxHeight: "90%", display: "block" }}
+          />
+        </div>
+      )}
     </Container>
   );
 };
