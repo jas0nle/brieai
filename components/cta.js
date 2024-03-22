@@ -9,23 +9,22 @@ const Cta = () => {
     setUploadedVideo(file);
   };
 
-  const displayVideo = () => {
-    console.log("test");
-    if (uploadedVideo) {
-      console.log("viduploaded");
-      const videoURL = URL.createObjectURL(uploadedVideo);
-      const videoElement = document.createElement('video');
-      videoElement.src = videoURL;
-      videoElement.controls = true;
-      const container = document.createElement('div');
-      container.appendChild(videoElement);
 
-      // Append the container to the document body
-      document.body.appendChild(container);
-    } else {
-      console.log("error");
-      alert("Please upload a video first.");
+  const cv = require('opencv4nodejs');
+  const fs = require('fs');
+  const base64 = require('base64-js');
+
+  const displayVideo = () => {
+    const video = new cv.VideoCapture(uploadedVideo);
+    const base64Frames = [];
+    while (video.read()) {
+      const frame = video.frame;
+      const jpgBuffer = cv.imencode('.jpg', frame);
+      const base64Encoded = base64.fromByteArray(jpgBuffer);
+      base64Frames.push(base64Encoded);
     }
+    video.release();
+    console.log(base64Frames.length + ' frames read.');
   };
 
   return (
