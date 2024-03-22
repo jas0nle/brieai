@@ -66,7 +66,7 @@ const Navbar = () => {
                       </Link>
                     ))}
                     <Link
-                      href="/"
+                      href="/app"
                       className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
                     >
                       Get Started
