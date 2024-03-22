@@ -4,7 +4,7 @@ import {
   CursorArrowRaysIcon,
   DevicePhoneMobileIcon,
   AdjustmentsHorizontalIcon,
-  Calculator,
+  ClipboardDocumentIcon,
   SunIcon,
 } from "@heroicons/react/24/solid";
 
@@ -29,7 +29,7 @@ const benefitOne = {
     {
       title: "Custom Schedule and Plans",
       desc: "Receive a custom workout schedule tailored to your needs.",
-      icon: <Calculator />,
+      icon: <ClipboardDocumentIcon />,
     },
   ],
 };
