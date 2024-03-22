@@ -12,7 +12,7 @@ import benefitOneImg from "../public/img/benefit-one.png";
 import benefitTwoImg from "../public/img/benefit-two.png";
 
 const benefitOne = {
-  title: "The benefits of AI powered workouts",
+  title: "The benefits of AI-powered workouts",
   desc: "From personalized guidance to optimized routines, each workout is tailored to maximize your results. Embrace efficiency, precision, and effectiveness like never before, and unlock the true potential of your fitness journey with AI-powered workouts.",
   image: benefitOneImg,
   bullets: [
@@ -35,23 +35,23 @@ const benefitOne = {
 };
 
 const benefitTwo = {
-  title: "Offer more benefits here",
-  desc: "You can use this same layout with a flip image to highlight your rest of the benefits of your product. It can also contain an image or Illustration as above section along with some bullet points.",
+  title: "The benefits don't stop there",
+  desc: "Seamlessly integrate our platform into your current routine, amplifying your results effortlessly. With expert guidance available at your fingertips 24/7, you're equipped to conquer any fitness challenge. Stay motivated and accountable with progress tracking features and personalized challenges, ensuring every step of your journey leads to success. Elevate your fitness game to new heights with BrieAI - where innovation meets achievement.",
   image: benefitTwoImg,
   bullets: [
     {
-      title: "Mobile Responsive Template",
-      desc: "Nextly is designed as a mobile first responsive template.",
+      title: "Easy Integration",
+      desc: "Seamlessly integrate BrieAI into your existing fitness regimen for enhanced results.",
       icon: <DevicePhoneMobileIcon />,
     },
     {
-      title: "Powered by Next.js & TailwindCSS",
-      desc: "This template is powered by latest technologies and tools.",
+      title: "Progress Tracking",
+      desc: "Stay motivated and accountable with progress tracking features and personalized challenges tailored to your goals.",
       icon: <AdjustmentsHorizontalIcon />,
     },
     {
-      title: "Dark & Light Mode",
-      desc: "Nextly comes with a zero-config light & dark mode. ",
+      title: "24/7 Support",
+      desc: "Access expert-level guidance and support anytime, anywhere, empowering you to take control of your fitness journey. ",
       icon: <SunIcon />,
     },
   ],
