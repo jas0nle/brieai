@@ -41,7 +41,9 @@ const Cta = () => {
             >
               Submit
             </button>
-            <py-script>def on_click(): print("Hello world2")</py-script>
+            <html>
+              <py-script>def on_click(): print("Hello world2")</py-script>
+            </html>
           </form>
         </div>
       </div>
