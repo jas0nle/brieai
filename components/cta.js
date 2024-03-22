@@ -35,14 +35,14 @@ const Cta = () => {
                 onChange={handleFileUpload}
               />
             </label>
-            <button
-              className="inline-block py-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 cursor-pointer"
-              py-onClick="on_click"
-            >
-              Submit
-            </button>
             <html>
-              <py-script>def on_click(): print("Hello world2")</py-script>
+              <button
+                className="inline-block py-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 cursor-pointer"
+                py-onClick="on_click"
+              >
+                Submit
+              </button>
+              <py-script>def on_click(): console.log("Hello world2")</py-script>
             </html>
           </form>
         </div>
