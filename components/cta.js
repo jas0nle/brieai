@@ -71,9 +71,15 @@ const Cta = () => {
           />
         </div>
       )}
-      <PyScriptProvider>
-      <PyScript>display("Hello world!")</PyScript>
-      </PyScriptProvider>
+      <div
+  dangerouslySetInnerHTML={{
+    __html: `<py-script>
+    from datetime import datetime
+    now = datetime.now()
+    now.strftime("%m/%d/%Y, %H:%M:%S")
+    </py-script>`,
+  }}
+/>
     </Container>
     
   );
