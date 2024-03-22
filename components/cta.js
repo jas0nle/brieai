@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { PyScriptProvider } from "pyscript-react";
 import Container from "./container";
 
 const Cta = () => {
@@ -71,17 +72,10 @@ const Cta = () => {
           />
         </div>
       )}
-      <div
-  dangerouslySetInnerHTML={{
-    __html: `<py-script>
-    from datetime import datetime
-    now = datetime.now()
-    now.strftime("%m/%d/%Y, %H:%M:%S")
-    </py-script>`,
-  }}
-/>
+      <PyScriptProvider>
+      <PyScript>display("Hello world!")</PyScript>
+      </PyScriptProvider>
     </Container>
-    
   );
 };
 
