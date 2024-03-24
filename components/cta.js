@@ -23,7 +23,7 @@ const Cta = () => {
           <form action="" method="get" encType="multipart/form-data">
             <label
               htmlFor="upload-video"
-              className="inline-block py-3 mr-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 cursor-pointer"
+              className="inline-block py-3 mr-3 my-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 cursor-pointer"
             >
               {uploadedVideo ? `${uploadedVideo.name}` : "Upload Video"}
               <input
