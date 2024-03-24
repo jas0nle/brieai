@@ -32,11 +32,9 @@ const Home = () => {
       <Benefits imgPos="right" data={benefitTwo} />
       <SectionTitle
         pretitle="Watch a video"
-        title="Learn how to fullfil your needs"
+        title="Learn how to get the most out of BrieAI"
       >
-        This section is to highlight a promo or demo video of your product.
-        Analysts says a landing page with video has 3% more conversion rate. So,
-        don&apos;t forget to add one. Just like this.
+        Upload, submit, learn. It's that easy.
       </SectionTitle>
       <Video />
       <SectionTitle
