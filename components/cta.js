@@ -47,22 +47,6 @@ const Cta = () => {
           </form>
         </div>
       </div>
-      {showVideo && (
-        <div
-          className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-75 z-50"
-          onClick={() => setShowVideo(false)}
-        >
-          <video
-            src={URL.createObjectURL(uploadedVideo)}
-            controls
-            className="mx-auto"
-            style={{ maxWidth: "90%", maxHeight: "90%", display: "block" }}
-          />
-        </div>
-      )}
-      <PyScriptProvider>
-        <PyScript>print("Hello world!")</PyScript>
-      </PyScriptProvider>
     </Container>
   );
 };
