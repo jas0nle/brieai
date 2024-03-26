@@ -1,24 +1,13 @@
 import React, { useState } from "react";
-import PyScript, { PyScriptProvider } from "pyscript-react";
 import Container from "./container";
 
 const Cta = () => {
   const [uploadedVideo, setUploadedVideo] = useState(null);
-  const [showVideo, setShowVideo] = useState(false);
 
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
     setUploadedVideo(file);
   };
-
-  const displayVideo = () => {
-    if (uploadedVideo) {
-      setShowVideo(true);
-    } else {
-      alert("Please upload a video first.");
-    }
-  };
-
   return (
     <Container>
       <div className="flex flex-wrap items-center justify-between w-full max-w-4xl gap-5 mx-auto text-white bg-indigo-600 px-7 py-7 lg:px-12 lg:py-12 lg:flex-nowrap rounded-xl">
@@ -34,7 +23,7 @@ const Cta = () => {
           <form action="" method="get" encType="multipart/form-data">
             <label
               htmlFor="upload-video"
-              className="inline-block py-3 mr-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 cursor-pointer"
+              className="inline-block py-3 mr-3 my-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 cursor-pointer"
             >
               {uploadedVideo ? `${uploadedVideo.name}` : "Upload Video"}
               <input
@@ -47,15 +36,14 @@ const Cta = () => {
               />
             </label>
             <button
-              id="button"
-              onClick={(event) => {
-                event.preventDefault();
-                displayVideo();
-              }}
               className="inline-block py-3 mx-auto text-lg font-medium text-center text-indigo-600 bg-white rounded-md px-7 lg:px-10 lg:py-5 cursor-pointer"
+              py-onClick="on_click"
             >
               Submit
             </button>
+            <html>
+              <py-script>def on_click(): print("Hello world2")</py-script>
+            </html>
           </form>
         </div>
       </div>
