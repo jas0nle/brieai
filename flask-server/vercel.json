@@ -7,9 +7,23 @@
         }
     ],
     "routes": [
+        { "handle": "filesystem" },
         {
-            "src": "/(.*)",
-            "dest": "/"
+          "src": "/members",
+          "dest": "backend/members.py"
+        },
+        {
+          "src": "/upload-video",
+          "dest": "backend/upload-video.py"
+        },
+        {
+          "src": "/(.*)",
+          "dest": "/index.html"
         }
-    ]
+      ],
+      "functions": {
+        "backend/**/*.py": {
+          "runtime": "python3.8"
+        }
+      }
 }
