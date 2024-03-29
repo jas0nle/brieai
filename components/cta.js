@@ -23,7 +23,7 @@ const Cta = ({setFrameCount}) => {
     formData.append("video", uploadedVideo);
 
     try {
-      const response = await fetch("http://localhost:5000/upload-video", {
+      const response = await fetch("/upload-video", {
         method: "POST",
         body: formData,
       });
