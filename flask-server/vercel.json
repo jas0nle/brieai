@@ -10,7 +10,7 @@
         { "handle": "filesystem" },
         {
           "src": "/members",
-          "dest": "./server.py"
+          "dest": "/flask-server/server.py"
         },
         {
           "src": "/upload-video",
