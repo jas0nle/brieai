@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Nextly Landing Page Template",
   "private": true,
+  "proxy": "http://localhost:5000",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -35,6 +36,7 @@
     "react-dom": "^18",
     "react-helmet-async": "^2.0.4",
     "react-hook-form": "^7.43.9",
+    "scheduler": "^0.23.0",
     "zustand": "^4.5.2"
   },
   "devDependencies": {
