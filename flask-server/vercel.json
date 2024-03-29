@@ -10,7 +10,7 @@
         { "handle": "filesystem" },
         {
           "src": "/members",
-          "dest": "backend/members.py"
+          "dest": "/backend/members"
         },
         {
           "src": "/upload-video",

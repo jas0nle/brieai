@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   const [data, setData] = useState([{}])
 
   useEffect(() => {
-    fetch("/members").then(
+    fetch("/backend/members").then(
       res => res.json()
       ).then(
         data => {
